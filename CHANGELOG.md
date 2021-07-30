@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.0.12](https://www.github.com/kissmybutton/motorcortex-backgrounds/compare/v0.0.11...v0.0.12) (2021-07-30)
+
+
+### Bug Fixes
+
+* remove attribute from incidents ([cc06926](https://www.github.com/kissmybutton/motorcortex-backgrounds/commit/cc06926ca585fc9a437e00584bb44e6074ccf871))
+
 ### 0.0.11 (2021-04-16)
 
 
