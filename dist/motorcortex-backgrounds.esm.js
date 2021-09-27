@@ -1,4 +1,4 @@
-import MotorCortex, { loadPlugin, HTMLClip } from '@kissmybutton/motorcortex';
+import MotorCortex, { loadPlugin, HTMLClip } from '@donkeyclip/motorcortex';
 
 function ownKeys$1(object, enumerableOnly) {
   var keys = Object.keys(object);
@@ -284,6 +284,8 @@ function _assertThisInitialized(self) {
 function _possibleConstructorReturn(self, call) {
   if (call && (typeof call === "object" || typeof call === "function")) {
     return call;
+  } else if (call !== void 0) {
+    throw new TypeError("Derived constructors may only return object or undefined");
   }
 
   return _assertThisInitialized(self);
@@ -2321,7 +2323,7 @@ var animatedAttrs = {
     min: 0
   }
 };
-var name$1 = "@kissmybutton/motorcortex-anime";
+var name$1 = "@donkeyclip/motorcortex-anime";
 var version$1 = "2.1.16";
 var index$1 = {
   npm_name: name$1,
@@ -3037,7 +3039,7 @@ var ThreeSidesRevealValidation = {
   }
 };
 
-var name = "@kissmybutton/motorcortex-backgrounds";
+var name = "@donkeyclip/motorcortex-backgrounds";
 var version = "0.1.14";
 
 var index = {

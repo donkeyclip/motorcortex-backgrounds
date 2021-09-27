@@ -1,5 +1,5 @@
-import { HTMLClip, loadPlugin } from "@kissmybutton/motorcortex";
-import Player from "@kissmybutton/motorcortex-player";
+import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
+import Player from "@donkeyclip/motorcortex-player";
 import BackgroundsDefinition from "../dist/motorcortex-backgrounds.umd";
 const Plugin = loadPlugin(BackgroundsDefinition);
 
@@ -7,13 +7,13 @@ const clip = new HTMLClip({
   css: `
     .container {
       overflow: hidden;
-      width:512px;
-      height:288px;
+      width:426px;
+      height:239px;
     }
 
     .wrapper{
-      width:1728px;
-      height:872px;
+      width:1280px;
+      height:720px;
       display:flex;
       font-family: 'Poppins', sans-serif;
       display: grid;
@@ -58,10 +58,10 @@ const clip = new HTMLClip({
 
 const BgOpener = new Plugin.BgOpener(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     bgUrl:
-      "https://kissmybutton.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
+      "https://donkeyclip.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
     easing: "easeInQuad",
     exitStart: 2000
   },
@@ -72,10 +72,10 @@ const BgOpener = new Plugin.BgOpener(
 
 const TwoSidesReveal = new Plugin.TwoSidesReveal(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     bgUrl:
-      "https://kissmybutton.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
+      "https://donkeyclip.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
     easing: "easeInQuad"
   },
   {
@@ -85,10 +85,10 @@ const TwoSidesReveal = new Plugin.TwoSidesReveal(
 
 const RowReveal = new Plugin.RowReveal(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     bgUrl:
-      "https://kissmybutton.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
+      "https://donkeyclip.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
     timing: 1,
     easing: "easeOutQuart",
     exitStart: 2000,
@@ -101,10 +101,10 @@ const RowReveal = new Plugin.RowReveal(
 
 const ColumnReveal = new Plugin.ColumnReveal(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     bgUrl:
-      "https://kissmybutton.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
+      "https://donkeyclip.github.io/motorcortex-backgrounds/demo/assets/kissmybutonbg.jpg",
     timing: 1,
     easing: "easeOutQuart",
     exitStart: 2000,
@@ -117,10 +117,10 @@ const ColumnReveal = new Plugin.ColumnReveal(
 
 const ThreeSidesReveal = new Plugin.ThreeSidesReveal(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     bgUrl:
-      "https://kissmybutton.github.io/motorcortex-backgrounds/demo/assets/bg3.jpg",
+      "https://donkeyclip.github.io/motorcortex-backgrounds/demo/assets/bg3.jpg",
     overlayColor: "#ff0000",
     grid: false,
     // gridDuration: 5000,
@@ -135,8 +135,8 @@ const ThreeSidesReveal = new Plugin.ThreeSidesReveal(
 
 const Grid = new Plugin.Grid(
   {
-    width: 512,
-    height: 288,
+    width: 426,
+    height: 239,
     color: "#000",
     columns: 6,
     rows: 4,
