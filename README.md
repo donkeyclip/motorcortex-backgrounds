@@ -1,21 +1,21 @@
 # motorcortex-backgrounds
 
 ## Demo
-[Check it out here](https://kissmybutton.github.io/motorcortex-backgrounds/demo/index.html)
+[Check it out here](https://donkeyclip.github.io/motorcortex-backgrounds/demo/index.html)
 
 ## Installation
 
 ```bash
-$ npm install --save @kissmybutton/motorcortex-backgrounds
+$ npm install --save @donkeyclip/motorcortex-backgrounds
 # OR
-$ yarn add @kissmybutton/motorcortex-backgrounds
+$ yarn add @donkeyclip/motorcortex-backgrounds
 ```
 
 ## Loading
 
 ```javascript
-import {loadPlugin} from "@kissmybutton/motorcortex";
-import BackgroundsDefinition from "@kissmybutton/motorcortex-backgrounds";
+import {loadPlugin} from "@donkeyclip/motorcortex";
+import BackgroundsDefinition from "@donkeyclip/motorcortex-backgrounds";
 const Plugin = loadPlugin(BackgroundsDefinition);
 ```
 
@@ -28,7 +28,7 @@ const BgOpener = new Plugin.BgOpener(
   {
     width: 512,
     height: 288,
-    bgUrl:"https://kissmybutton.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    bgUrl:"https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
     timing:0.3,
     easing:"easeInQuad",
     exitStart:2000
@@ -58,7 +58,7 @@ const TwoSidesReveal = new Plugin.TwoSidesReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://kissmybutton.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
     easing:"easeInQuad",
   },
   {
@@ -86,7 +86,7 @@ const RowReveal = new Plugin.RowReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://kissmybutton.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
     easing:"easeOutQuart",
     exitStart:2000,
     bgOut: true
@@ -117,7 +117,7 @@ const ColumnReveal = new Plugin.ColumnReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://kissmybutton.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
     easing:"easeOutQuart",
     exitStart:2000,
     bgOut: true
@@ -177,7 +177,7 @@ const ThreeSidesReveal = new Plugin.ThreeSidesReveal(
   {
     width: 512,
     height: 288,
-    bgUrl: "https://kissmybutton.github.io/motorcortex-slides/demo/bg3.jpg",
+    bgUrl: "https://donkeyclip.github.io/motorcortex-slides/demo/bg3.jpg",
     overlayColor: "#ff0000",
     grid: true,
     gridDuration:1,
