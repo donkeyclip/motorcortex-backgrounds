@@ -1,6 +1,7 @@
 # motorcortex-backgrounds
 
 ## Demo
+
 [Check it out here](https://donkeyclip.github.io/motorcortex-backgrounds/demo/index.html)
 
 ## Installation
@@ -14,7 +15,7 @@ $ yarn add @donkeyclip/motorcortex-backgrounds
 ## Loading
 
 ```javascript
-import {loadPlugin} from "@donkeyclip/motorcortex";
+import { loadPlugin } from "@donkeyclip/motorcortex";
 import BackgroundsDefinition from "@donkeyclip/motorcortex-backgrounds";
 const Plugin = loadPlugin(BackgroundsDefinition);
 ```
@@ -28,27 +29,27 @@ const BgOpener = new Plugin.BgOpener(
   {
     width: 512,
     height: 288,
-    bgUrl:"https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
-    timing:0.3,
-    easing:"easeInQuad",
-    exitStart:2000
+    bgUrl:
+      "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    timing: 0.3,
+    easing: "easeInQuad",
+    exitStart: 2000,
   },
   {
-    selector: ".container1"
+    selector: ".container1",
   }
 );
 ```
 
 ### BgOpener Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| bgUrl     | url of the bg image  | string |
-| easing     | easing of the animation  | string |
-| exitStart     | the millisecond that we want to start the bg exiting  | num |
-
+| Name      |                         Are                          | Values |
+| --------- | :--------------------------------------------------: | -----: |
+| width     |                  width of incident                   |    num |
+| height    |                  height of incident                  |    num |
+| bgUrl     |                 url of the bg image                  | string |
+| easing    |               easing of the animation                | string |
+| exitStart | the millisecond that we want to start the bg exiting |    num |
 
 ## TwoSidesReveal
 
@@ -58,25 +59,23 @@ const TwoSidesReveal = new Plugin.TwoSidesReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
-    easing:"easeInQuad",
+      "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    easing: "easeInQuad",
   },
   {
-    selector: ".container2"
+    selector: ".container2",
   }
 );
 ```
 
 ### TwoSidesReveal Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| bgUrl     | url of the bg image  | string |
-| easing     | easing of the animation  | string |
-
-
+| Name   |           Are           | Values |
+| ------ | :---------------------: | -----: |
+| width  |    width of incident    |    num |
+| height |   height of incident    |    num |
+| bgUrl  |   url of the bg image   | string |
+| easing | easing of the animation | string |
 
 ## RowReveal
 
@@ -86,28 +85,27 @@ const RowReveal = new Plugin.RowReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
-    easing:"easeOutQuart",
-    exitStart:2000,
-    bgOut: true
+      "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    easing: "easeOutQuart",
+    exitStart: 2000,
+    bgOut: true,
   },
   {
-    selector: ".container3"
+    selector: ".container3",
   }
 );
 ```
 
 ### RowReveal Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| bgUrl     | url of the bg image  | string |
-| easing     | easing of the animation  | string |
-| exitStart     | the millisecond that we want to start the bg exiting  | num |
-| bgOut     | set true if we like to have a bg exit  | boolean |
-
+| Name      |                         Are                          |  Values |
+| --------- | :--------------------------------------------------: | ------: |
+| width     |                  width of incident                   |     num |
+| height    |                  height of incident                  |     num |
+| bgUrl     |                 url of the bg image                  |  string |
+| easing    |               easing of the animation                |  string |
+| exitStart | the millisecond that we want to start the bg exiting |     num |
+| bgOut     |        set true if we like to have a bg exit         | boolean |
 
 ## ColumnReveal
 
@@ -117,29 +115,27 @@ const ColumnReveal = new Plugin.ColumnReveal(
     width: 512,
     height: 288,
     bgUrl:
-    "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
-    easing:"easeOutQuart",
-    exitStart:2000,
-    bgOut: true
+      "https://donkeyclip.github.io/motorcortex-slides/demo/kissmybutonbg.jpg",
+    easing: "easeOutQuart",
+    exitStart: 2000,
+    bgOut: true,
   },
   {
-    selector: ".container4"
+    selector: ".container4",
   }
 );
 ```
 
 ### ColumnReveal Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| bgUrl     | url of the bg image  | string |
-| easing     | easing of the animation  | string |
-| exitStart     | the millisecond that we want to start the bg exiting  | num |
-| bgOut     | set true if we like to have a bg exit  | boolean |
-
-
+| Name      |                         Are                          |  Values |
+| --------- | :--------------------------------------------------: | ------: |
+| width     |                  width of incident                   |     num |
+| height    |                  height of incident                  |     num |
+| bgUrl     |                 url of the bg image                  |  string |
+| easing    |               easing of the animation                |  string |
+| exitStart | the millisecond that we want to start the bg exiting |     num |
+| bgOut     |        set true if we like to have a bg exit         | boolean |
 
 ## Grid
 
@@ -150,25 +146,23 @@ const Grid = new Plugin.Grid(
     height: 288,
     color: "#000",
     columns: 6,
-    rows : 4,
+    rows: 4,
   },
   {
-    selector: ".container6"
+    selector: ".container6",
   }
 );
 ```
 
 ### Grid Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| color     | the color of the background  | hex,rgb |
-| columns     | how many columns the grid will have  | num |
-| rows     | how many rows the grid will have  | num |
-
-
+| Name    |                 Are                 |  Values |
+| ------- | :---------------------------------: | ------: |
+| width   |          width of incident          |     num |
+| height  |         height of incident          |     num |
+| color   |     the color of the background     | hex,rgb |
+| columns | how many columns the grid will have |     num |
+| rows    |  how many rows the grid will have   |     num |
 
 ## ThreeSidesReveal
 
@@ -180,10 +174,10 @@ const ThreeSidesReveal = new Plugin.ThreeSidesReveal(
     bgUrl: "https://donkeyclip.github.io/motorcortex-slides/demo/bg3.jpg",
     overlayColor: "#ff0000",
     grid: true,
-    gridDuration:1,
+    gridDuration: 1,
     gridColor: "#000",
     columns: 6,
-    rows : 4,
+    rows: 4,
   },
   {
     selector: ".container5",
@@ -193,14 +187,20 @@ const ThreeSidesReveal = new Plugin.ThreeSidesReveal(
 
 ### ThreeSidesReveal Attrs
 
-| Name        | Are           | Values  |
-| ------------- |:-------------:| -----:|
-| width     | width of incident  | num |
-| height     | height of incident  | num |
-| bgUrl     | url of the bg image  | string |
-| overlayColor   | overlay color of background  | hex,rgb |
-| grid     | set true if we like to have a gid  | boolean |
-| gridDuration     | grid incident duration  | num |
-| gridColor     | the color of the background  | hex,rgb |
-| columns     | how many columns the grid will have  | num |
-| rows     | how many rows the grid will have  | num |
+| Name         |                 Are                 |  Values |
+| ------------ | :---------------------------------: | ------: |
+| width        |          width of incident          |     num |
+| height       |         height of incident          |     num |
+| bgUrl        |         url of the bg image         |  string |
+| overlayColor |     overlay color of background     | hex,rgb |
+| grid         |  set true if we like to have a gid  | boolean |
+| gridDuration |       grid incident duration        |     num |
+| gridColor    |     the color of the background     | hex,rgb |
+| columns      | how many columns the grid will have |     num |
+| rows         |  how many rows the grid will have   |     num |
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
