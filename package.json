@@ -5,10 +5,10 @@
   "main": "dist/motorcortex-backgrounds.cjs.js",
   "module": "dist/motorcortex-backgrounds.esm.js",
   "browser": "dist/motorcortex-backgrounds.umd.js",
-  "author": "KissMyButton PC (kissmybutton.gr) <opensource@kissmybutton.gr>",
+  "author": "Donkeyclip (donkeyclip.com) <opensource@donkeyclip.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kissmybutton/motorcortex-backgrounds.git"
+    "url": "https://github.com/donkeyclip/motorcortex-backgrounds.git"
   },
   "license": "MIT",
   "engines": {
@@ -132,12 +132,5 @@
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.3.1",
     "whatwg-fetch": "3.6.2"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged",
-      "pre-push": "npm run test:prod"
-    }
   }
 }
