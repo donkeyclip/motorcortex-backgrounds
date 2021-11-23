@@ -830,7 +830,7 @@ var ThreeSidesRevealValidation = {
 };
 
 var name = "@donkeyclip/motorcortex-backgrounds";
-var version = "0.1.14";
+var version = "0.1.0";
 var description = "Backgrounds plugin for MotorCortex";
 var main = "dist/motorcortex-backgrounds.cjs.js";
 var module$1 = "dist/motorcortex-backgrounds.esm.js";
