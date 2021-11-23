@@ -1,6 +1,6 @@
 {
   "name": "@donkeyclip/motorcortex-backgrounds",
-  "version": "0.1.14",
+  "version": "0.1.0",
   "description": "Backgrounds plugin for MotorCortex",
   "main": "dist/motorcortex-backgrounds.cjs.js",
   "module": "dist/motorcortex-backgrounds.esm.js",
