@@ -10,44 +10,44 @@ import {
   RowRevealValidation,
   ColumnRevealValidation,
   GridValidation,
-  ThreeSidesRevealValidation
+  ThreeSidesRevealValidation,
 } from "./validation";
 
-import { name, version } from "../package.json";
+import pkg from "../package.json";
 
 export default {
-  npm_name: name,
-  version: version,
+  npm_name: pkg.name,
+  version: pkg.version,
   incidents: [
     {
       exportable: BgOpener,
       name: "BgOpener",
-      attributesValidationRules: { ...BgOpenerValidation }
+      attributesValidationRules: { ...BgOpenerValidation },
     },
     {
       exportable: TwoSidesReveal,
       name: "TwoSidesReveal",
-      attributesValidationRules: { ...TwoSidesRevealValidation }
+      attributesValidationRules: { ...TwoSidesRevealValidation },
     },
     {
       exportable: ColumnReveal,
       name: "ColumnReveal",
-      attributesValidationRules: { ...ColumnRevealValidation }
+      attributesValidationRules: { ...ColumnRevealValidation },
     },
     {
       exportable: RowReveal,
       name: "RowReveal",
-      attributesValidationRules: { ...RowRevealValidation }
+      attributesValidationRules: { ...RowRevealValidation },
     },
     {
       exportable: ThreeSidesReveal,
       name: "ThreeSidesReveal",
-      attributesValidationRules: { ...ThreeSidesRevealValidation }
+      attributesValidationRules: { ...ThreeSidesRevealValidation },
     },
     {
       exportable: Grid,
       name: "Grid",
-      attributesValidationRules: { ...GridValidation }
-    }
-  ]
+      attributesValidationRules: { ...GridValidation },
+    },
+  ],
 };

@@ -1,15 +1,12 @@
-import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class BgOpener extends HTMLClip {
   get font() {
     return [
       {
         type: `google-font`,
-        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
-      }
+        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`,
+      },
     ];
   }
 
@@ -54,107 +51,107 @@ export default class BgOpener extends HTMLClip {
   }
 
   buildTree() {
-    const bgPosition = new Anime.Anime(
+    const bgPosition = new CSSEffect(
       {
         animatedAttrs: {
-          top: `${0}px`
+          top: `${0}px`,
         },
         initialValues: {
-          top: `-${this.attrs.height / 2}px`
-        }
+          top: `-${this.attrs.height / 2}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-0",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(bgPosition, 0);
 
-    const bgPositionOne = new Anime.Anime(
+    const bgPositionOne = new CSSEffect(
       {
         animatedAttrs: {
-          top: `-${this.attrs.height / 2}px`
+          top: `-${this.attrs.height / 2}px`,
         },
         initialValues: {
-          top: `-${this.attrs.height / 2}px`
-        }
+          top: `-${this.attrs.height / 2}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-1",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(bgPositionOne, 0);
 
-    const wrapperHeight = new Anime.Anime(
+    const wrapperHeight = new CSSEffect(
       {
         animatedAttrs: {
           height: `${this.attrs.height / 2}px`,
-          top: `${0}px`
+          top: `${0}px`,
         },
         initialValues: {
           height: `${0}px`,
-          top: `${this.attrs.height / 2}px`
-        }
+          top: `${this.attrs.height / 2}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-wrapper",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(wrapperHeight, 0);
 
-    const wrapperHeightOut = new Anime.Anime(
+    const wrapperHeightOut = new CSSEffect(
       {
         animatedAttrs: {
           // height: `${this.attrs.height/2}px`,
-          top: `-${this.attrs.height / 2}px`
+          top: `-${this.attrs.height / 2}px`,
         },
         initialValues: {
           // height: `${0}px`,
-          top: `${0}px`
-        }
+          top: `${0}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-wrapper-0",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(wrapperHeightOut, this.attrs.exitStart);
 
-    const wrapperHeightOutOne = new Anime.Anime(
+    const wrapperHeightOutOne = new CSSEffect(
       {
         animatedAttrs: {
           // height: `${this.attrs.height/2}px`,
-          top: `${this.attrs.height / 2}px`
+          top: `${this.attrs.height / 2}px`,
         },
         initialValues: {
           // height: `${0}px`,
-          top: `${0}px`
-        }
+          top: `${0}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-wrapper-1",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(wrapperHeightOutOne, this.attrs.exitStart);
 
-    const bgPositionOut = new Anime.Anime(
+    const bgPositionOut = new CSSEffect(
       {
         animatedAttrs: {
-          top: `${this.attrs.height / 2}px`
-        }
+          top: `${this.attrs.height / 2}px`,
+        },
         // initialValues: {
         //   top: `-${this.attrs.height/2}px`
         // }
@@ -162,25 +159,25 @@ export default class BgOpener extends HTMLClip {
       {
         duration: 300,
         selector: ".bg-0",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 
     this.addIncident(bgPositionOut, this.attrs.exitStart);
 
-    const bgPositionOneOut = new Anime.Anime(
+    const bgPositionOneOut = new CSSEffect(
       {
         animatedAttrs: {
-          top: `-${this.attrs.height}px`
+          top: `-${this.attrs.height}px`,
         },
         initialValues: {
-          top: `-${this.attrs.height / 2}px`
-        }
+          top: `-${this.attrs.height / 2}px`,
+        },
       },
       {
         duration: 300,
         selector: ".bg-1",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
 

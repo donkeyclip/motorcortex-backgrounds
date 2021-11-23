@@ -1,15 +1,12 @@
-import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class TwoSidesReveal extends HTMLClip {
   get font() {
     return [
       {
         type: `google-font`,
-        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
-      }
+        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`,
+      },
     ];
   }
 
@@ -60,35 +57,35 @@ export default class TwoSidesReveal extends HTMLClip {
   }
 
   buildTree() {
-    const bgPositionLeft = new Anime.Anime(
+    const bgPositionLeft = new CSSEffect(
       {
         animatedAttrs: {
-          left: `${this.attrs.width / 2}px`
+          left: `${this.attrs.width / 2}px`,
         },
         initialValues: {
-          left: `${this.attrs.width}px`
-        }
+          left: `${this.attrs.width}px`,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-0",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
     this.addIncident(bgPositionLeft, 0);
-    const bgPositionRigth = new Anime.Anime(
+    const bgPositionRigth = new CSSEffect(
       {
         animatedAttrs: {
-          right: `${this.attrs.width / 2}px`
+          right: `${this.attrs.width / 2}px`,
         },
         initialValues: {
-          right: `${this.attrs.width}px`
-        }
+          right: `${this.attrs.width}px`,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-1",
-        easing: this.attrs.easing
+        easing: this.attrs.easing,
       }
     );
     this.addIncident(bgPositionRigth, 0);

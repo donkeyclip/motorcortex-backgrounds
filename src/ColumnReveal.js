@@ -1,15 +1,12 @@
-import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class ColumnReveal extends HTMLClip {
   get font() {
     return [
       {
         type: `google-font`,
-        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
-      }
+        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`,
+      },
     ];
   }
 
@@ -72,32 +69,32 @@ export default class ColumnReveal extends HTMLClip {
   }
 
   buildTree() {
-    const bgPositionOneIn = new Anime.Anime(
+    const bgPositionOneIn = new CSSEffect(
       {
         animatedAttrs: {
-          top: `${0}px`
-        }
+          top: `${0}px`,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-wrapper",
         easing: this.attrs.easing,
-        delay: `@expression(random(500))`
+        delay: `@expression(random(500))`,
       }
     );
     this.addIncident(bgPositionOneIn, 0);
     if (this.attrs.bgOut === true) {
-      const bgPositionOneOut = new Anime.Anime(
+      const bgPositionOneOut = new CSSEffect(
         {
           animatedAttrs: {
-            top: `${this.attrs.height}px`
-          }
+            top: `${this.attrs.height}px`,
+          },
         },
         {
           duration: 1000,
           selector: ".bg-wrapper",
           easing: this.attrs.easing,
-          delay: `@expression(random(500))`
+          delay: `@expression(random(500))`,
         }
       );
       this.addIncident(bgPositionOneOut, this.attrs.exitStart);

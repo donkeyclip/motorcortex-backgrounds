@@ -1,16 +1,14 @@
-import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-import grid from "./Grid";
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
-const Anime = loadPlugin(AnimeDefinition);
+import grid from "./Grid";
 
 export default class ThreeSidesReveal extends HTMLClip {
   get font() {
     return [
       {
         type: `google-font`,
-        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
-      }
+        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`,
+      },
     ];
   }
 
@@ -94,107 +92,107 @@ export default class ThreeSidesReveal extends HTMLClip {
   }
 
   buildTree() {
-    const bgWrapperBgColor = new Anime.Anime(
+    const bgWrapperBgColor = new CSSEffect(
       {
         animatedAttrs: {
-          opacity: 0
+          opacity: 0,
         },
         initialValues: {
-          opacity: 1
-        }
+          opacity: 1,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-in",
         easing: "easeOutQuart",
-        delay: `@stagger(200, 500,0)`
+        delay: `@stagger(200, 500,0)`,
       }
     );
     this.addIncident(bgWrapperBgColor, 0);
-    const bgWrapperOpacity = new Anime.Anime(
+    const bgWrapperOpacity = new CSSEffect(
       {
         animatedAttrs: {
-          opacity: 1
+          opacity: 1,
         },
         initialValues: {
-          opacity: 0
-        }
+          opacity: 0,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-wrapper-in",
         easing: "easeOutQuart",
-        delay: `@stagger(0, 500,0)`
+        delay: `@stagger(0, 500,0)`,
       }
     );
     this.addIncident(bgWrapperOpacity, 100);
 
-    const bgOne = new Anime.Anime(
+    const bgOne = new CSSEffect(
       {
         animatedAttrs: {
-          left: "0px"
+          left: "0px",
         },
         initialValues: {
-          left: `-${this.attrs.width / 2}px`
-        }
+          left: `-${this.attrs.width / 2}px`,
+        },
       },
       {
         duration: 1400,
         selector: ".bg-0",
-        easing: "easeOutQuart"
+        easing: "easeOutQuart",
       }
     );
     this.addIncident(bgOne, 0);
 
-    const bgTwo = new Anime.Anime(
+    const bgTwo = new CSSEffect(
       {
         animatedAttrs: {
-          top: `0px`
+          top: `0px`,
         },
         initialValues: {
-          top: `-${this.attrs.height * 0.65}px`
-        }
+          top: `-${this.attrs.height * 0.65}px`,
+        },
       },
       {
         duration: 1000,
         selector: ".bg-1",
-        easing: "easeOutQuart"
+        easing: "easeOutQuart",
       }
     );
     this.addIncident(bgTwo, 400);
 
-    const bgThree = new Anime.Anime(
+    const bgThree = new CSSEffect(
       {
         animatedAttrs: {
-          left: `0px`
+          left: `0px`,
         },
         initialValues: {
-          left: `-${this.attrs.width / 2}px`
-        }
+          left: `-${this.attrs.width / 2}px`,
+        },
       },
       {
         duration: 1500,
         selector: ".bg-2",
-        easing: "easeOutQuart"
+        easing: "easeOutQuart",
       }
     );
     this.addIncident(bgThree, 400);
-    const bgScale = new Anime.Anime(
+    const bgScale = new CSSEffect(
       {
         animatedAttrs: {
           transform: {
-            scale: 1
-          }
+            scale: 1,
+          },
         },
         initialValues: {
           transform: {
-            scale: 1.2
-          }
-        }
+            scale: 1.2,
+          },
+        },
       },
       {
         duration: 3600,
-        selector: ".bg"
+        selector: ".bg",
       }
     );
     this.addIncident(bgScale, 1000);
@@ -205,11 +203,11 @@ export default class ThreeSidesReveal extends HTMLClip {
           height: this.attrs.height,
           color: this.attrs.gridColor,
           columns: this.attrs.columns,
-          rows: this.attrs.rows
+          rows: this.attrs.rows,
         },
         {
           selector: ".bg",
-          duration: this.attrs.gridDuration || 1972
+          duration: this.attrs.gridDuration || 1972,
         }
       );
 

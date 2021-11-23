@@ -1,15 +1,12 @@
-import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class Grid extends HTMLClip {
   get font() {
     return [
       {
         type: `google-font`,
-        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
-      }
+        src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`,
+      },
     ];
   }
 
@@ -46,19 +43,19 @@ export default class Grid extends HTMLClip {
   }
 
   buildTree() {
-    const gridOpacity = new Anime.Anime(
+    const gridOpacity = new CSSEffect(
       {
         animatedAttrs: {
-          opacity: 0
+          opacity: 0,
         },
         initialValues: {
-          opacity: 0.7
-        }
+          opacity: 0.7,
+        },
       },
       {
         duration: 1000,
         selector: ".grid",
-        delay: `@expression(random(1000))`
+        delay: `@expression(random(1000))`,
       }
     );
     this.addIncident(gridOpacity, 0);
