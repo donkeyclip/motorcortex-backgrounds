@@ -926,7 +926,7 @@ var devDependencies = {
 	"eslint-plugin-import": "2.25.3",
 	"eslint-plugin-node": "11.1.0",
 	"eslint-plugin-prettier": "4.0.0",
-	"eslint-plugin-promise": "5.1.1",
+	"eslint-plugin-promise": "5.2.0",
 	"eslint-plugin-standard": "4.1.0",
 	"exports-loader": "3.1.0",
 	husky: "7.0.4",
