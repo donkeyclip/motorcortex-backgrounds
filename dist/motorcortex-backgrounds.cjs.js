@@ -944,7 +944,7 @@ var devDependencies = {
 	"rollup-plugin-terser": "7.0.2",
 	"semantic-release": "18.0.1",
 	shelljs: "0.8.4",
-	webpack: "5.64.4",
+	webpack: "5.65.0",
 	"webpack-cli": "4.9.1",
 	"webpack-dev-server": "4.6.0",
 	"whatwg-fetch": "3.6.2"
