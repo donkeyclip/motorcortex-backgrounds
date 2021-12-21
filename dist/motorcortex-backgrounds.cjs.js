@@ -940,7 +940,7 @@ var devDependencies = {
 	shelljs: "0.8.4",
 	webpack: "5.65.0",
 	"webpack-cli": "4.9.1",
-	"webpack-dev-server": "4.6.0",
+	"webpack-dev-server": "4.7.0",
 	"whatwg-fetch": "3.6.2"
 };
 var pkg = {
