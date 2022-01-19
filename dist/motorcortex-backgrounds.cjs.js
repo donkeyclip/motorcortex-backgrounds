@@ -888,8 +888,8 @@ var peerDependencies = {
 };
 var devDependencies = {
 	"@babel/cli": "7.16.8",
-	"@babel/core": "7.16.7",
-	"@babel/preset-env": "7.16.8",
+	"@babel/core": "7.16.10",
+	"@babel/preset-env": "7.16.10",
 	"@commitlint/cli": "13.2.1",
 	"@commitlint/config-conventional": "13.2.0",
 	"@donkeyclip/motorcortex": "7.6.6",
