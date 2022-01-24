@@ -939,7 +939,7 @@ var devDependencies = {
 	"semantic-release": "18.0.1",
 	shelljs: "0.8.5",
 	webpack: "5.67.0",
-	"webpack-cli": "4.9.1",
+	"webpack-cli": "4.9.2",
 	"webpack-dev-server": "4.7.3",
 	"whatwg-fetch": "3.6.2"
 };
