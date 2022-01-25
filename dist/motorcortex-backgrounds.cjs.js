@@ -931,7 +931,7 @@ var devDependencies = {
 	npx: "*",
 	prettier: "2.5.1",
 	rimraf: "3.0.2",
-	rollup: "2.66.0",
+	rollup: "2.66.1",
 	"rollup-plugin-babel": "4.4.0",
 	"rollup-plugin-commonjs": "10.1.0",
 	"rollup-plugin-node-resolve": "5.2.0",
