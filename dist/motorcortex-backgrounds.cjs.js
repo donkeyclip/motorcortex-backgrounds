@@ -885,7 +885,7 @@ var devDependencies = {
 	"css-loader": "6.7.1",
 	"es6-promise": "4.2.8",
 	eslint: "7.32.0",
-	"eslint-config-prettier": "8.3.0",
+	"eslint-config-prettier": "8.5.0",
 	"eslint-plugin-babel": "5.3.1",
 	"eslint-plugin-import": "2.25.4",
 	"eslint-plugin-node": "11.1.0",
