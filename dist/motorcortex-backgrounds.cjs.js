@@ -836,11 +836,9 @@ var repository = {
 };
 var license = "MIT";
 var engines = {
-	node: ">=8.3.2"
+	node: ">=12"
 };
 var scripts = {
-	"update-force:packages": "./node_modules/npm-check-updates/bin/ncu -u && npm i",
-	"update:packages": "npm update --save/--save-dev",
 	concurrently: "concurrently -c \"cyan.bold,magenta.bold\" --names \"JS,Styles\"",
 	"lint:styles": "stylelint \"src/**.css\" \"src/**/*.scss\" --config .stylelintrc.json",
 	"lint:js": "eslint -c .eslintrc src/**/*.js",
@@ -854,7 +852,6 @@ var scripts = {
 	test: "HERE GOES YOUR TEST TASK",
 	"test:prod": "npm run lint",
 	"report-coverage": "cat ./coverage/lcov.info | coveralls",
-	commit: "git-cz",
 	prebuild: "rimraf dist",
 	prepare: "husky install"
 };
@@ -862,60 +859,33 @@ var keywords = [
 	"motorcortex",
 	"animation"
 ];
-var release = {
-	verifyConditions: [
-		"@semantic-release/changelog",
-		"@semantic-release/npm",
-		"@semantic-release/github",
-		"@semantic-release/git"
-	],
-	prepare: [
-		"@semantic-release/changelog",
-		"@semantic-release/npm",
-		"@semantic-release/git"
-	]
-};
-var config = {
-	commitizen: {
-		path: "cz-conventional-changelog"
-	}
-};
 var dependencies = {
 	browserify: "^17.0.0"
 };
 var peerDependencies = {
-	"@donkeyclip/motorcortex": "^7.6"
+	"@donkeyclip/motorcortex": ">= 8 < 9"
 };
 var devDependencies = {
 	"@babel/cli": "7.16.8",
 	"@babel/core": "7.16.12",
 	"@babel/preset-env": "7.16.11",
-	"@commitlint/cli": "16.1.0",
-	"@commitlint/config-conventional": "16.0.0",
-	"@donkeyclip/motorcortex": "7.8.0",
-	"@donkeyclip/motorcortex-player": "2.5.0",
+	"@donkeyclip/motorcortex": "8.0.1",
+	"@donkeyclip/motorcortex-player": "2.5.2",
 	"@rollup/plugin-babel": "5.3.0",
 	"@rollup/plugin-commonjs": "21.0.1",
 	"@rollup/plugin-json": "4.1.0",
 	"@rollup/plugin-node-resolve": "13.1.3",
-	"@semantic-release/changelog": "6.0.1",
-	"@semantic-release/git": "10.0.1",
-	"@semantic-release/github": "8.0.2",
-	"@semantic-release/npm": "9.0.0",
 	"babel-eslint": "10.1.0",
 	"babel-loader": "8.2.3",
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.19.1",
 	"caniuse-lite": "1.0.30001304",
-	commitizen: "4.2.4",
-	concurrently: "7.0.0",
+	concurrently: "^7.0.0",
 	coveralls: "3.1.1",
 	"css-loader": "6.5.1",
-	"cz-conventional-changelog": "3.3.0",
 	"es6-promise": "4.2.8",
 	eslint: "7.32.0",
 	"eslint-config-prettier": "8.3.0",
-	"eslint-config-standard": "16.0.3",
 	"eslint-plugin-babel": "5.3.1",
 	"eslint-plugin-import": "2.25.4",
 	"eslint-plugin-node": "11.1.0",
@@ -936,8 +906,8 @@ var devDependencies = {
 	"rollup-plugin-commonjs": "10.1.0",
 	"rollup-plugin-node-resolve": "5.2.0",
 	"rollup-plugin-terser": "7.0.2",
-	"semantic-release": "19.0.2",
 	shelljs: "0.8.5",
+	tslib: "^2.3.1",
 	webpack: "5.67.0",
 	"webpack-cli": "4.9.2",
 	"webpack-dev-server": "4.7.3",
@@ -957,20 +927,14 @@ var pkg = {
 	scripts: scripts,
 	keywords: keywords,
 	"lint-staged": {
-	"*.{json,md,yml,yaml}": [
+	"*.{json,md,html,css}": [
 		"prettier --write"
-	],
-	"*.css": [
-		"prettier --write",
-		"stylelint  \"src/**.css\" --config .stylelintrc.json --fix"
 	],
 	"*.{js,jsx}": [
 		"prettier --write",
 		"eslint --fix"
 	]
 },
-	release: release,
-	config: config,
 	dependencies: dependencies,
 	peerDependencies: peerDependencies,
 	devDependencies: devDependencies
