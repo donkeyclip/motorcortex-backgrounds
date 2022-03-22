@@ -876,7 +876,7 @@ var devDependencies = {
 	"babel-eslint": "10.1.0",
 	"babel-loader": "8.2.4",
 	"babel-preset-es2015-node5": "1.2.0",
-	browserslist: "4.19.1",
+	browserslist: "4.20.2",
 	"caniuse-lite": "1.0.30001319",
 	concurrently: "^7.0.0",
 	coveralls: "3.1.1",
