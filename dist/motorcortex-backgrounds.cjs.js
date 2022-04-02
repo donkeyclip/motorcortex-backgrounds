@@ -879,7 +879,7 @@ var devDependencies = {
 	"babel-loader": "8.2.4",
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.20.2",
-	"caniuse-lite": "1.0.30001323",
+	"caniuse-lite": "1.0.30001324",
 	concurrently: "^7.0.0",
 	coveralls: "3.1.1",
 	"css-loader": "6.7.1",
