@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.0](https://github.com/donkeyclip/motorcortex-backgrounds/compare/v0.1.0...v0.2.0) (2022-04-07)
+
+
+### Features
+
+* declare mc 8 as compatible ([ed1f017](https://github.com/donkeyclip/motorcortex-backgrounds/commit/ed1f0173c2d9de941a9767cc2109017dc67b5874))
+* drop explorer 11 support ([cddea8c](https://github.com/donkeyclip/motorcortex-backgrounds/commit/cddea8cf6c2b5777930a0c478ad045736af5f498))
+* update compatibility with motorcortex ([91151b4](https://github.com/donkeyclip/motorcortex-backgrounds/commit/91151b44172a951514af16e99620b0282d8a67e1))
+
 ## [0.1.0](https://www.github.com/donkeyclip/motorcortex-backgrounds/compare/v0.0.11...v0.1.0) (2021-11-23)
 
 
