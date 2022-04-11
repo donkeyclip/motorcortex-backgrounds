@@ -620,7 +620,7 @@ var devDependencies = {
 	"@rollup/plugin-babel": "5.3.1",
 	"@rollup/plugin-commonjs": "21.0.3",
 	"@rollup/plugin-json": "4.1.0",
-	"@rollup/plugin-node-resolve": "13.1.3",
+	"@rollup/plugin-node-resolve": "13.2.0",
 	"babel-eslint": "10.1.0",
 	"babel-loader": "8.2.4",
 	"babel-preset-es2015-node5": "1.2.0",
