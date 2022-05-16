@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.2.1](https://github.com/donkeyclip/motorcortex-backgrounds/compare/v0.2.0...v0.2.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* delete commitlint.config.js ([7ba6011](https://github.com/donkeyclip/motorcortex-backgrounds/commit/7ba60116a7cd87aea875ec20f6b7f220fed67c89))
+
 ## [0.2.0](https://github.com/donkeyclip/motorcortex-backgrounds/compare/v0.1.0...v0.2.0) (2022-04-07)
 
 
