@@ -628,7 +628,7 @@ var devDependencies = {
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.20.3",
 	"caniuse-lite": "1.0.30001342",
-	concurrently: "7.2.0",
+	concurrently: "7.2.1",
 	coveralls: "3.1.1",
 	"css-loader": "6.7.1",
 	"es6-promise": "4.2.8",
