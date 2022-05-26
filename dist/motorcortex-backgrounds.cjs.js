@@ -615,8 +615,8 @@ var peerDependencies = {
 };
 var devDependencies = {
 	"@babel/cli": "7.17.10",
-	"@babel/core": "7.18.0",
-	"@babel/preset-env": "7.18.0",
+	"@babel/core": "7.18.2",
+	"@babel/preset-env": "7.18.2",
 	"@donkeyclip/motorcortex": "9.4.0",
 	"@donkeyclip/motorcortex-player": "2.10.1",
 	"@rollup/plugin-babel": "5.3.1",
@@ -627,7 +627,7 @@ var devDependencies = {
 	"babel-loader": "8.2.5",
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.20.3",
-	"caniuse-lite": "1.0.30001342",
+	"caniuse-lite": "1.0.30001343",
 	concurrently: "7.2.1",
 	coveralls: "3.1.1",
 	"css-loader": "6.7.1",
