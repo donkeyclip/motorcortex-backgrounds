@@ -645,7 +645,7 @@ var devDependencies = {
 	"lint-staged": "12.5.0",
 	"npm-check-updates": "*",
 	npx: "*",
-	prettier: "2.6.2",
+	prettier: "2.7.0",
 	rimraf: "3.0.2",
 	rollup: "2.75.6",
 	"rollup-plugin-babel": "4.4.0",
