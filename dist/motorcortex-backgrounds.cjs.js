@@ -637,7 +637,7 @@ var devDependencies = {
 	"eslint-plugin-babel": "5.3.1",
 	"eslint-plugin-import": "2.26.0",
 	"eslint-plugin-node": "11.1.0",
-	"eslint-plugin-prettier": "4.1.0",
+	"eslint-plugin-prettier": "4.2.1",
 	"eslint-plugin-promise": "5.2.0",
 	"eslint-plugin-standard": "4.1.0",
 	"exports-loader": "3.1.0",
