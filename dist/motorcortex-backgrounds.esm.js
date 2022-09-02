@@ -3,26 +3,58 @@ import { HTMLClip, CSSEffect } from '@donkeyclip/motorcortex';
 class BgOpener extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
   get html() {
-    return "\n      <div class=\"wrapper\">\n        <div class=\"bg-wrapper bg-wrapper-0\">\n          <div class=\"bg bg-0\"></div>\n        </div>\n        <div class=\"bg-wrapper bg-wrapper-1\">\n          <div class=\"bg bg-1\"></div>\n        </div>\n  \t  </div>\n    ";
+    return `
+      <div class="wrapper">
+        <div class="bg-wrapper bg-wrapper-0">
+          <div class="bg bg-0"></div>
+        </div>
+        <div class="bg-wrapper bg-wrapper-1">
+          <div class="bg bg-1"></div>
+        </div>
+  	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        flex-direction: column;\n      }\n      .bg-wrapper{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: relative;\n        overflow: hidden;\n      }\n      .bg{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        background:url(").concat(this.attrs.bgUrl, ") no-repeat;\n        background-size: contain;\n        position: relative;\n      }\n    ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+      }
+      .bg-wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      .bg{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        background:url(${this.attrs.bgUrl}) no-repeat;
+        background-size: contain;
+        position: relative;
+      }
+    `;
   }
 
   buildTree() {
     const bgPosition = new CSSEffect({
       animatedAttrs: {
-        top: "".concat(0, "px")
+        top: `${0}px`
       },
       initialValues: {
-        top: "-".concat(this.attrs.height / 2, "px")
+        top: `-${this.attrs.height / 2}px`
       }
     }, {
       duration: 300,
@@ -32,10 +64,10 @@ class BgOpener extends HTMLClip {
     this.addIncident(bgPosition, 0);
     const bgPositionOne = new CSSEffect({
       animatedAttrs: {
-        top: "-".concat(this.attrs.height / 2, "px")
+        top: `-${this.attrs.height / 2}px`
       },
       initialValues: {
-        top: "-".concat(this.attrs.height / 2, "px")
+        top: `-${this.attrs.height / 2}px`
       }
     }, {
       duration: 300,
@@ -45,12 +77,12 @@ class BgOpener extends HTMLClip {
     this.addIncident(bgPositionOne, 0);
     const wrapperHeight = new CSSEffect({
       animatedAttrs: {
-        height: "".concat(this.attrs.height / 2, "px"),
-        top: "".concat(0, "px")
+        height: `${this.attrs.height / 2}px`,
+        top: `${0}px`
       },
       initialValues: {
-        height: "".concat(0, "px"),
-        top: "".concat(this.attrs.height / 2, "px")
+        height: `${0}px`,
+        top: `${this.attrs.height / 2}px`
       }
     }, {
       duration: 300,
@@ -61,11 +93,11 @@ class BgOpener extends HTMLClip {
     const wrapperHeightOut = new CSSEffect({
       animatedAttrs: {
         // height: `${this.attrs.height/2}px`,
-        top: "-".concat(this.attrs.height / 2, "px")
+        top: `-${this.attrs.height / 2}px`
       },
       initialValues: {
         // height: `${0}px`,
-        top: "".concat(0, "px")
+        top: `${0}px`
       }
     }, {
       duration: 300,
@@ -76,11 +108,11 @@ class BgOpener extends HTMLClip {
     const wrapperHeightOutOne = new CSSEffect({
       animatedAttrs: {
         // height: `${this.attrs.height/2}px`,
-        top: "".concat(this.attrs.height / 2, "px")
+        top: `${this.attrs.height / 2}px`
       },
       initialValues: {
         // height: `${0}px`,
-        top: "".concat(0, "px")
+        top: `${0}px`
       }
     }, {
       duration: 300,
@@ -90,7 +122,7 @@ class BgOpener extends HTMLClip {
     this.addIncident(wrapperHeightOutOne, this.attrs.exitStart);
     const bgPositionOut = new CSSEffect({
       animatedAttrs: {
-        top: "".concat(this.attrs.height / 2, "px")
+        top: `${this.attrs.height / 2}px`
       } // initialValues: {
       //   top: `-${this.attrs.height/2}px`
       // }
@@ -103,10 +135,10 @@ class BgOpener extends HTMLClip {
     this.addIncident(bgPositionOut, this.attrs.exitStart);
     const bgPositionOneOut = new CSSEffect({
       animatedAttrs: {
-        top: "-".concat(this.attrs.height, "px")
+        top: `-${this.attrs.height}px`
       },
       initialValues: {
-        top: "-".concat(this.attrs.height / 2, "px")
+        top: `-${this.attrs.height / 2}px`
       }
     }, {
       duration: 300,
@@ -121,26 +153,64 @@ class BgOpener extends HTMLClip {
 class TwoSidesReveal extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
   get html() {
-    return "\n      <div class=\"wrapper\">\n        <div class=\"bg-wrapper bg-wrapper-0\">\n          <div class=\"bg bg-0\"></div>\n        </div>\n        <div class=\"bg-wrapper bg-wrapper-1\">\n          <div class=\"bg bg-1\"></div>\n        </div>\n  \t  </div>\n    ";
+    return `
+      <div class="wrapper">
+        <div class="bg-wrapper bg-wrapper-0">
+          <div class="bg bg-0"></div>
+        </div>
+        <div class="bg-wrapper bg-wrapper-1">
+          <div class="bg bg-1"></div>
+        </div>
+  	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        overflow: hidden;\n      }\n      .bg-wrapper{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: absolute;\n        overflow: hidden;\n      }\n      .bg-wrapper-0{\n        right: ").concat(this.attrs.width / 2, "px;\n      }\n      .bg-wrapper-1{\n        left: ").concat(this.attrs.width / 2, "px;\n      }\n      .bg{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        background:url(").concat(this.attrs.bgUrl, ") no-repeat;\n        background-size: contain;\n        position: relative;\n      }\n    ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        overflow: hidden;
+      }
+      .bg-wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        overflow: hidden;
+      }
+      .bg-wrapper-0{
+        right: ${this.attrs.width / 2}px;
+      }
+      .bg-wrapper-1{
+        left: ${this.attrs.width / 2}px;
+      }
+      .bg{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        background:url(${this.attrs.bgUrl}) no-repeat;
+        background-size: contain;
+        position: relative;
+      }
+    `;
   }
 
   buildTree() {
     const bgPositionLeft = new CSSEffect({
       animatedAttrs: {
-        left: "".concat(this.attrs.width / 2, "px")
+        left: `${this.attrs.width / 2}px`
       },
       initialValues: {
-        left: "".concat(this.attrs.width, "px")
+        left: `${this.attrs.width}px`
       }
     }, {
       duration: 1000,
@@ -150,10 +220,10 @@ class TwoSidesReveal extends HTMLClip {
     this.addIncident(bgPositionLeft, 0);
     const bgPositionRigth = new CSSEffect({
       animatedAttrs: {
-        right: "".concat(this.attrs.width / 2, "px")
+        right: `${this.attrs.width / 2}px`
       },
       initialValues: {
-        right: "".concat(this.attrs.width, "px")
+        right: `${this.attrs.width}px`
       }
     }, {
       duration: 1000,
@@ -168,42 +238,92 @@ class TwoSidesReveal extends HTMLClip {
 class ColumnReveal extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
   get html() {
-    return "\n      <div class=\"wrapper\">\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-0\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-1\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-2\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-3\"></div>\n        </div>\n  \t  </div>\n    ";
+    return `
+      <div class="wrapper">
+        <div class="bg-wrapper">
+          <div class="bg bg-0"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-1"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-2"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-3"></div>
+        </div>
+  	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n      }\n      .bg-wrapper{\n        width: ").concat(this.attrs.width / 4, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: relative;\n        overflow: hidden;\n        top: -").concat(this.attrs.height, "px;\n      }\n      .bg{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        background:url(").concat(this.attrs.bgUrl, ") no-repeat;\n        background-size: cover;\n        position: absolute;\n      }\n      .bg-0{\n        left:0\n      }\n      .bg-1{\n        left:-").concat(this.attrs.width - this.attrs.width / 4 * 3, "px;\n      }\n      .bg-2{\n        left:-").concat(this.attrs.width - this.attrs.width / 4 * 2, "px;\n      }\n      .bg-3{\n        left:-").concat(this.attrs.width - this.attrs.width / 4, "px;\n      }\n    ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+      }
+      .bg-wrapper{
+        width: ${this.attrs.width / 4}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+        top: -${this.attrs.height}px;
+      }
+      .bg{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        background:url(${this.attrs.bgUrl}) no-repeat;
+        background-size: cover;
+        position: absolute;
+      }
+      .bg-0{
+        left:0
+      }
+      .bg-1{
+        left:-${this.attrs.width - this.attrs.width / 4 * 3}px;
+      }
+      .bg-2{
+        left:-${this.attrs.width - this.attrs.width / 4 * 2}px;
+      }
+      .bg-3{
+        left:-${this.attrs.width - this.attrs.width / 4}px;
+      }
+    `;
   }
 
   buildTree() {
     const bgPositionOneIn = new CSSEffect({
       animatedAttrs: {
-        top: "".concat(0, "px")
+        top: `${0}px`
       }
     }, {
       duration: 1000,
       selector: ".bg-wrapper",
       easing: this.attrs.easing,
-      delay: "@expression(random(500))"
+      delay: `@expression(random(500))`
     });
     this.addIncident(bgPositionOneIn, 0);
 
     if (this.attrs.bgOut === true) {
       const bgPositionOneOut = new CSSEffect({
         animatedAttrs: {
-          top: "".concat(this.attrs.height, "px")
+          top: `${this.attrs.height}px`
         }
       }, {
         duration: 1000,
         selector: ".bg-wrapper",
         easing: this.attrs.easing,
-        delay: "@expression(random(500))"
+        delay: `@expression(random(500))`
       });
       this.addIncident(bgPositionOneOut, this.attrs.exitStart);
     }
@@ -214,42 +334,93 @@ class ColumnReveal extends HTMLClip {
 class RowReveal extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
   get html() {
-    return "\n      <div class=\"wrapper\">\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-0\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-1\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-2\"></div>\n        </div>\n        <div class=\"bg-wrapper\">\n          <div class=\"bg bg-3\"></div>\n        </div>\n  \t  </div>\n    ";
+    return `
+      <div class="wrapper">
+        <div class="bg-wrapper">
+          <div class="bg bg-0"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-1"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-2"></div>
+        </div>
+        <div class="bg-wrapper">
+          <div class="bg bg-3"></div>
+        </div>
+  	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        flex-direction: column;\n      }\n      .bg-wrapper{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height / 4, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: relative;\n        overflow: hidden;\n        left:").concat(this.attrs.width, "px;\n      }\n      .bg{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        background:url(").concat(this.attrs.bgUrl, ") no-repeat;\n        background-size: cover;\n        position: relative;\n      }\n      .bg-0{\n        top:0\n      }\n      .bg-1{\n        top:-").concat(this.attrs.height - this.attrs.height / 4 * 3, "px;\n      }\n      .bg-2{\n        top:-").concat(this.attrs.height - this.attrs.height / 4 * 2, "px;\n      }\n      .bg-3{\n        top:-").concat(this.attrs.height - this.attrs.height / 4, "px;\n      }\n    ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+      }
+      .bg-wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height / 4}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+        left:${this.attrs.width}px;
+      }
+      .bg{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        background:url(${this.attrs.bgUrl}) no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      .bg-0{
+        top:0
+      }
+      .bg-1{
+        top:-${this.attrs.height - this.attrs.height / 4 * 3}px;
+      }
+      .bg-2{
+        top:-${this.attrs.height - this.attrs.height / 4 * 2}px;
+      }
+      .bg-3{
+        top:-${this.attrs.height - this.attrs.height / 4}px;
+      }
+    `;
   }
 
   buildTree() {
     const bgPositionOneIn = new CSSEffect({
       animatedAttrs: {
-        left: "0px"
+        left: `0px`
       }
     }, {
       duration: 1000,
       selector: ".bg-wrapper",
       easing: this.attrs.easing,
-      delay: "@stagger(0, 500,0)"
+      delay: `@stagger(0, 500,0)`
     });
     this.addIncident(bgPositionOneIn, 0);
 
     if (this.attrs.bgOut === true) {
       const bgPositionOneOut = new CSSEffect({
         animatedAttrs: {
-          left: "-".concat(this.attrs.width, "px")
+          left: `-${this.attrs.width}px`
         }
       }, {
         duration: 1000,
         selector: ".bg-wrapper",
         easing: this.attrs.easing,
-        delay: "@stagger(0, 500,0)"
+        delay: `@stagger(0, 500,0)`
       });
       this.addIncident(bgPositionOneOut, this.attrs.exitStart);
     }
@@ -260,8 +431,8 @@ class RowReveal extends HTMLClip {
 class Grid extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
@@ -270,14 +441,32 @@ class Grid extends HTMLClip {
     const items = this.attrs.columns * this.attrs.rows;
 
     for (let i = 0; i < items; i++) {
-      gridList.push(" <div  class=\"grid grid-".concat(i, "\"> </div> "));
+      gridList.push(` <div  class="grid grid-${i}"> </div> `);
     }
 
-    return "\n    <div class=\"wrapper\">\n      ".concat(gridList.join(""), "\n\t  </div>\n    ");
+    return `
+    <div class="wrapper">
+      ${gridList.join("")}
+	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        font-family: 'Poppins', sans-serif;\n        display: grid;\n        grid-template-columns: repeat(").concat(this.attrs.columns, ", 1fr);\n        justify-items: center;\n      }\n      .grid{\n        background: ").concat(this.attrs.color, ";\n        width: ").concat(this.attrs.width / this.attrs.columns, "px;\n        height: ").concat(this.attrs.height / this.attrs.rows, "px;\n      }\n  ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        font-family: 'Poppins', sans-serif;
+        display: grid;
+        grid-template-columns: repeat(${this.attrs.columns}, 1fr);
+        justify-items: center;
+      }
+      .grid{
+        background: ${this.attrs.color};
+        width: ${this.attrs.width / this.attrs.columns}px;
+        height: ${this.attrs.height / this.attrs.rows}px;
+      }
+  `;
   }
 
   buildTree() {
@@ -291,7 +480,7 @@ class Grid extends HTMLClip {
     }, {
       duration: 1000,
       selector: ".grid",
-      delay: "@expression(random(1000))"
+      delay: `@expression(random(1000))`
     });
     this.addIncident(gridOpacity, 0);
   }
@@ -301,17 +490,88 @@ class Grid extends HTMLClip {
 class ThreeSidesReveal extends HTMLClip {
   get font() {
     return [{
-      type: "google-font",
-      src: "https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap"
+      type: `google-font`,
+      src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
 
   get html() {
-    return "\n      <div class=\"wrapper\">\n        <div class=\"bg-wrapper bg-wrapper-0\">\n          <div class=\" bg-wrapper-in\">\n            <div class=\"bg bg-0\"><div class=\"bg-in\"></div></div>\n          </div>\n          <div class=\" bg-wrapper-in\">\n            <div class=\"bg bg-1\"><div class=\"bg-in\"></div></div>\n          </div>\n        </div>\n        <div class=\"bg-wrapper  bg-wrapper-1\">\n          <div class=\"bg-wrapper-full-width bg-wrapper-in \">\n            <div class=\"bg bg-2\"><div class=\"bg-in\"></div></div>.\n          </div>\n        </div>\n  \t  </div>\n    ";
+    return `
+      <div class="wrapper">
+        <div class="bg-wrapper bg-wrapper-0">
+          <div class=" bg-wrapper-in">
+            <div class="bg bg-0"><div class="bg-in"></div></div>
+          </div>
+          <div class=" bg-wrapper-in">
+            <div class="bg bg-1"><div class="bg-in"></div></div>
+          </div>
+        </div>
+        <div class="bg-wrapper  bg-wrapper-1">
+          <div class="bg-wrapper-full-width bg-wrapper-in ">
+            <div class="bg bg-2"><div class="bg-in"></div></div>.
+          </div>
+        </div>
+  	  </div>
+    `;
   }
 
   get css() {
-    return "\n      .wrapper{\n        width: ".concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        flex-direction: column;\n      }\n      .bg-wrapper{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: relative;\n        overflow: hidden;\n      }\n\n      .bg-wrapper-0{\n        height: ").concat(this.attrs.height * 0.65, "px;\n      }\n      .bg-wrapper-1{\n        height: ").concat(this.attrs.height * 0.35, "px;\n      }\n      .bg-wrapper-in{\n        width: ").concat(this.attrs.width / 2, "px;\n        height: ").concat(this.attrs.height * 0.65, "px;\n        display:flex;\n        font-family: 'Poppins', sans-serif;\n        position: relative;\n        overflow: hidden;\n      }\n      .bg-wrapper-full-width{\n        width: ").concat(this.attrs.width, "px;\n      }\n      .bg{\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n        background:url(").concat(this.attrs.bgUrl, ") no-repeat;\n        background-size: cover;\n        position: absolute;\n      }\n      .bg-0{\n        left:0\n      }\n      .bg-1{\n        left:-").concat(this.attrs.width / 2, "px;\n      }\n      .bg-2{\n        top:-").concat(this.attrs.height * 0.65, "px;\n      }\n      .bg-in{\n        background:").concat(this.attrs.overlayColor, ";\n        width: ").concat(this.attrs.width, "px;\n        height: ").concat(this.attrs.height, "px;\n      }\n    ");
+    return `
+      .wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+      }
+      .bg-wrapper{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .bg-wrapper-0{
+        height: ${this.attrs.height * 0.65}px;
+      }
+      .bg-wrapper-1{
+        height: ${this.attrs.height * 0.35}px;
+      }
+      .bg-wrapper-in{
+        width: ${this.attrs.width / 2}px;
+        height: ${this.attrs.height * 0.65}px;
+        display:flex;
+        font-family: 'Poppins', sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      .bg-wrapper-full-width{
+        width: ${this.attrs.width}px;
+      }
+      .bg{
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+        background:url(${this.attrs.bgUrl}) no-repeat;
+        background-size: cover;
+        position: absolute;
+      }
+      .bg-0{
+        left:0
+      }
+      .bg-1{
+        left:-${this.attrs.width / 2}px;
+      }
+      .bg-2{
+        top:-${this.attrs.height * 0.65}px;
+      }
+      .bg-in{
+        background:${this.attrs.overlayColor};
+        width: ${this.attrs.width}px;
+        height: ${this.attrs.height}px;
+      }
+    `;
   }
 
   buildTree() {
@@ -326,7 +586,7 @@ class ThreeSidesReveal extends HTMLClip {
       duration: 1000,
       selector: ".bg-in",
       easing: "easeOutQuart",
-      delay: "@stagger(200, 500,0)"
+      delay: `@stagger(200, 500,0)`
     });
     this.addIncident(bgWrapperBgColor, 0);
     const bgWrapperOpacity = new CSSEffect({
@@ -340,7 +600,7 @@ class ThreeSidesReveal extends HTMLClip {
       duration: 1000,
       selector: ".bg-wrapper-in",
       easing: "easeOutQuart",
-      delay: "@stagger(0, 500,0)"
+      delay: `@stagger(0, 500,0)`
     });
     this.addIncident(bgWrapperOpacity, 100);
     const bgOne = new CSSEffect({
@@ -348,7 +608,7 @@ class ThreeSidesReveal extends HTMLClip {
         left: "0px"
       },
       initialValues: {
-        left: "-".concat(this.attrs.width / 2, "px")
+        left: `-${this.attrs.width / 2}px`
       }
     }, {
       duration: 1400,
@@ -358,10 +618,10 @@ class ThreeSidesReveal extends HTMLClip {
     this.addIncident(bgOne, 0);
     const bgTwo = new CSSEffect({
       animatedAttrs: {
-        top: "0px"
+        top: `0px`
       },
       initialValues: {
-        top: "-".concat(this.attrs.height * 0.65, "px")
+        top: `-${this.attrs.height * 0.65}px`
       }
     }, {
       duration: 1000,
@@ -371,10 +631,10 @@ class ThreeSidesReveal extends HTMLClip {
     this.addIncident(bgTwo, 400);
     const bgThree = new CSSEffect({
       animatedAttrs: {
-        left: "0px"
+        left: `0px`
       },
       initialValues: {
-        left: "-".concat(this.attrs.width / 2, "px")
+        left: `-${this.attrs.width / 2}px`
       }
     }, {
       duration: 1500,
@@ -625,7 +885,7 @@ var devDependencies = {
 	"babel-loader": "8.2.5",
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.21.3",
-	"caniuse-lite": "1.0.30001387",
+	"caniuse-lite": "1.0.30001388",
 	concurrently: "7.3.0",
 	coveralls: "3.1.1",
 	"css-loader": "6.7.1",
