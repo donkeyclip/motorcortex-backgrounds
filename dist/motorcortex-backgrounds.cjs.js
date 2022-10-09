@@ -874,9 +874,9 @@ var peerDependencies = {
 	"@donkeyclip/motorcortex": ">= 8 < 10"
 };
 var devDependencies = {
-	"@babel/cli": "7.18.10",
-	"@babel/core": "7.19.0",
-	"@babel/preset-env": "7.19.0",
+	"@babel/cli": "7.19.3",
+	"@babel/core": "7.19.3",
+	"@babel/preset-env": "7.19.3",
 	"@donkeyclip/motorcortex": "9.4.1",
 	"@donkeyclip/motorcortex-player": "2.10.5",
 	"@rollup/plugin-babel": "5.3.1",
