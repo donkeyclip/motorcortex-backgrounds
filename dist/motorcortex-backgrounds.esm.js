@@ -1762,7 +1762,7 @@ const RipplesValidation = {
 };
 
 var name = "@donkeyclip/motorcortex-backgrounds";
-var version = "0.2.0";
+var version = "0.3.0";
 var description = "Backgrounds plugin for MotorCortex";
 var main = "dist/motorcortex-backgrounds.cjs.js";
 var module = "dist/motorcortex-backgrounds.esm.js";
