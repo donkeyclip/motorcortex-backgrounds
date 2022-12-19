@@ -1754,7 +1754,7 @@ var devDependencies = {
 	"@rollup/plugin-json": "4.1.0",
 	"@rollup/plugin-node-resolve": "13.3.0",
 	"babel-eslint": "10.1.0",
-	"babel-loader": "8.2.5",
+	"babel-loader": "8.3.0",
 	"babel-preset-es2015-node5": "1.2.0",
 	browserslist: "4.21.4",
 	"caniuse-lite": "1.0.30001439",
