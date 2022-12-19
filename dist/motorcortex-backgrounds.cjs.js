@@ -1822,7 +1822,7 @@ var devDependencies = {
 	"caniuse-lite": "1.0.30001439",
 	concurrently: "7.4.0",
 	coveralls: "3.1.1",
-	"css-loader": "6.7.1",
+	"css-loader": "6.7.3",
 	"es6-promise": "4.2.8",
 	eslint: "7.32.0",
 	"eslint-config-prettier": "8.5.0",
