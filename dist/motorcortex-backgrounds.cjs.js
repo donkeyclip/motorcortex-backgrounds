@@ -9,7 +9,6 @@ class BgOpener extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -22,7 +21,6 @@ class BgOpener extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -49,7 +47,6 @@ class BgOpener extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const bgPosition = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -125,10 +122,10 @@ class BgOpener extends motorcortex.HTMLClip {
     const bgPositionOut = new motorcortex.CSSEffect({
       animatedAttrs: {
         top: `${this.attrs.height / 2}px`
-      } // initialValues: {
+      }
+      // initialValues: {
       //   top: `-${this.attrs.height/2}px`
       // }
-
     }, {
       duration: 300,
       selector: ".bg-0",
@@ -149,7 +146,6 @@ class BgOpener extends motorcortex.HTMLClip {
     });
     this.addIncident(bgPositionOneOut, this.attrs.exitStart);
   }
-
 }
 
 class TwoSidesReveal extends motorcortex.HTMLClip {
@@ -159,7 +155,6 @@ class TwoSidesReveal extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -172,7 +167,6 @@ class TwoSidesReveal extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -205,7 +199,6 @@ class TwoSidesReveal extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const bgPositionLeft = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -234,7 +227,6 @@ class TwoSidesReveal extends motorcortex.HTMLClip {
     });
     this.addIncident(bgPositionRigth, 0);
   }
-
 }
 
 class ColumnReveal extends motorcortex.HTMLClip {
@@ -244,7 +236,6 @@ class ColumnReveal extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -263,7 +254,6 @@ class ColumnReveal extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -302,7 +292,6 @@ class ColumnReveal extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const bgPositionOneIn = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -315,7 +304,6 @@ class ColumnReveal extends motorcortex.HTMLClip {
       delay: `@expression(random(500))`
     });
     this.addIncident(bgPositionOneIn, 0);
-
     if (this.attrs.bgOut === true) {
       const bgPositionOneOut = new motorcortex.CSSEffect({
         animatedAttrs: {
@@ -330,7 +318,6 @@ class ColumnReveal extends motorcortex.HTMLClip {
       this.addIncident(bgPositionOneOut, this.attrs.exitStart);
     }
   }
-
 }
 
 class RowReveal extends motorcortex.HTMLClip {
@@ -340,7 +327,6 @@ class RowReveal extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -359,7 +345,6 @@ class RowReveal extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -399,7 +384,6 @@ class RowReveal extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const bgPositionOneIn = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -412,7 +396,6 @@ class RowReveal extends motorcortex.HTMLClip {
       delay: `@stagger(0, 500,0)`
     });
     this.addIncident(bgPositionOneIn, 0);
-
     if (this.attrs.bgOut === true) {
       const bgPositionOneOut = new motorcortex.CSSEffect({
         animatedAttrs: {
@@ -427,7 +410,6 @@ class RowReveal extends motorcortex.HTMLClip {
       this.addIncident(bgPositionOneOut, this.attrs.exitStart);
     }
   }
-
 }
 
 class Grid extends motorcortex.HTMLClip {
@@ -437,22 +419,18 @@ class Grid extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const gridList = [];
     const items = this.attrs.columns * this.attrs.rows;
-
     for (let i = 0; i < items; i++) {
       gridList.push(` <div  class="grid grid-${i}"> </div> `);
     }
-
     return `
     <div class="wrapper">
       ${gridList.join("")}
 	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -470,7 +448,6 @@ class Grid extends motorcortex.HTMLClip {
       }
   `;
   }
-
   buildTree() {
     const gridOpacity = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -486,7 +463,6 @@ class Grid extends motorcortex.HTMLClip {
     });
     this.addIncident(gridOpacity, 0);
   }
-
 }
 
 class ThreeSidesReveal extends motorcortex.HTMLClip {
@@ -496,7 +472,6 @@ class ThreeSidesReveal extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -516,7 +491,6 @@ class ThreeSidesReveal extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -575,7 +549,6 @@ class ThreeSidesReveal extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const bgWrapperBgColor = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -660,7 +633,6 @@ class ThreeSidesReveal extends motorcortex.HTMLClip {
       selector: ".bg"
     });
     this.addIncident(bgScale, 1000);
-
     if (this.attrs.grid === true) {
       const Grid$1 = new Grid({
         width: this.attrs.width,
@@ -675,7 +647,6 @@ class ThreeSidesReveal extends motorcortex.HTMLClip {
       this.addIncident(Grid$1, 0);
     }
   }
-
 }
 
 class HexagonCircle extends motorcortex.HTMLClip {
@@ -685,7 +656,6 @@ class HexagonCircle extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -693,7 +663,6 @@ class HexagonCircle extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -782,7 +751,6 @@ class HexagonCircle extends motorcortex.HTMLClip {
       
     `;
   }
-
   buildTree() {
     const position = this.attrs.size / 2;
     const BgColor = new motorcortex.Combo({
@@ -927,13 +895,11 @@ class HexagonCircle extends motorcortex.HTMLClip {
     this.addIncident(BgColor, 0);
     this.addIncident(BgPosition, 0);
   }
-
 }
 
 function getRandomRenge(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-
 class FloatingBubbles extends motorcortex.HTMLClip {
   get font() {
     return [{
@@ -941,7 +907,6 @@ class FloatingBubbles extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     this.bubbleCords = [...new Array(this.attrs.bubbleCount / 2)].map(() => [getRandomRenge(0, 100), getRandomRenge(0, 100), getRandomRenge(3, this.attrs.maxBubbleRadius)]);
     return `
@@ -956,7 +921,6 @@ class FloatingBubbles extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     // const bubbleRadius = getRandomRenge(3, this.attrs.maxBubbleRadius);
     return `
@@ -988,7 +952,6 @@ class FloatingBubbles extends motorcortex.HTMLClip {
       
     `;
   }
-
   buildTree() {
     const initialToTop = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -1069,7 +1032,6 @@ class FloatingBubbles extends motorcortex.HTMLClip {
     this.addIncident(SwingEven, 0);
     this.addIncident(SwingOdd, 0);
   }
-
 }
 
 class Wave extends motorcortex.HTMLClip {
@@ -1079,7 +1041,6 @@ class Wave extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -1091,7 +1052,6 @@ class Wave extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -1136,7 +1096,6 @@ class Wave extends motorcortex.HTMLClip {
       
     `;
   }
-
   buildTree() {
     const WaveOne = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -1182,7 +1141,6 @@ class Wave extends motorcortex.HTMLClip {
     });
     this.addIncident(WaveThree, 0);
   }
-
 }
 
 class LineEffect extends motorcortex.Effect {
@@ -1190,7 +1148,6 @@ class LineEffect extends motorcortex.Effect {
     if (!this) {
       return;
     }
-
     this.canvasContext = this.element.getContext("2d");
     this.lines = [];
     this.w = this.canvasContext.canvas.width;
@@ -1224,7 +1181,6 @@ class LineEffect extends motorcortex.Effect {
     }];
     this.emitLine();
   }
-
   emitLine() {
     for (let i = 0; i < this.conf.emitNum; i++) {
       const rx = Math.random() * this.w + 100;
@@ -1243,14 +1199,11 @@ class LineEffect extends motorcortex.Effect {
       });
     }
   }
-
   drawLines(fr) {
     this.canvasContext.globalCompositeOperation = "lighter";
-
     for (let i = 0; i < this.lines.length; i++) {
       this.canvasContext.lineWidth = this.lines[i].width;
       this.canvasContext.beginPath();
-
       if (fr < 0.5) {
         this.lines[i].x1 = this.lines[i].x2 - this.lines[i].test * fr * this.lines[i].v2;
         this.lines[i].y1 = this.lines[i].y2 + this.lines[i].test * fr * this.lines[i].v2;
@@ -1258,24 +1211,20 @@ class LineEffect extends motorcortex.Effect {
         this.canvasContext.lineTo(this.lines[i].x1, this.lines[i].y1);
       } else {
         this.canvasContext.moveTo(this.lines[i].x2 - this.lines[i].test * (fr - 0.5) * this.lines[i].v1, this.lines[i].y2 + this.lines[i].test * (fr - 0.5) * this.lines[i].v1);
-
         if (this.lines[i].x2 - this.lines[i].test * (fr - 0.5) * this.lines[i].v1 >= this.lines[i].x1) {
           this.canvasContext.lineTo(this.lines[i].x1, this.lines[i].y1);
         } else {
           this.canvasContext.lineTo(undefined, undefined);
         }
       }
-
       this.canvasContext.strokeStyle = "hsla(" + (this.conf.hue - this.lines[i].hue) + ", 100%, 50%, " + this.conf.opacity + ")";
       this.canvasContext.lineCap = "round";
       this.canvasContext.stroke();
       this.canvasContext.closePath();
     }
   }
-
   drawBackground() {
     this.canvasContext.globalCompositeOperation = "lighter";
-
     for (let i = 0; i < this.bgDots.length; i++) {
       const grd = this.canvasContext.createRadialGradient(this.bgDots[i].x, this.bgDots[i].y, 0, this.bgDots[i].x, this.bgDots[i].y, this.bgDots[i].rad);
       grd.addColorStop(0, "hsla(" + (this.conf.hue + this.bgDots[i].hue) + ", 100%, 60%, 0.3)");
@@ -1287,7 +1236,6 @@ class LineEffect extends motorcortex.Effect {
       this.canvasContext.closePath();
     }
   }
-
   clear() {
     this.canvasContext.globalCompositeOperation = "source-over";
     this.canvasContext.beginPath();
@@ -1295,13 +1243,11 @@ class LineEffect extends motorcortex.Effect {
     this.canvasContext.fillRect(0, 0, this.w, this.h);
     this.canvasContext.closePath();
   }
-
   onProgress(ms) {
     this.clear();
     this.drawBackground();
     this.drawLines(this.getFraction(ms));
   }
-
 }
 
 var LineEffectDef = {
@@ -1319,7 +1265,6 @@ class GradientLines extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -1328,7 +1273,6 @@ class GradientLines extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -1341,7 +1285,6 @@ class GradientLines extends motorcortex.HTMLClip {
       
     `;
   }
-
   buildTree() {
     const LineEffect = new LineEffectPlugin.LineEffect({
       hue: this.attrs.hue,
@@ -1355,7 +1298,6 @@ class GradientLines extends motorcortex.HTMLClip {
     });
     this.addIncident(LineEffect, 0);
   }
-
 }
 
 class Ripples extends motorcortex.HTMLClip {
@@ -1365,7 +1307,6 @@ class Ripples extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     return `
       <div class="wrapper">
@@ -1377,7 +1318,6 @@ class Ripples extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -1435,7 +1375,6 @@ class Ripples extends motorcortex.HTMLClip {
       
     `;
   }
-
   buildTree() {
     const RippleIncident = new motorcortex.Combo({
       incidents: [{
@@ -1483,7 +1422,6 @@ class Ripples extends motorcortex.HTMLClip {
     });
     this.addIncident(RippleIncident, 0);
   }
-
 }
 
 const BgOpenerValidation = {
@@ -1807,8 +1745,8 @@ var peerDependencies = {
 };
 var devDependencies = {
 	"@babel/cli": "7.19.3",
-	"@babel/core": "7.19.3",
-	"@babel/preset-env": "7.19.4",
+	"@babel/core": "7.20.5",
+	"@babel/preset-env": "7.20.2",
 	"@donkeyclip/motorcortex": "9.4.1",
 	"@donkeyclip/motorcortex-player": "2.10.7",
 	"@rollup/plugin-babel": "5.3.1",
@@ -1886,57 +1824,68 @@ var index = {
   incidents: [{
     exportable: BgOpener,
     name: "BgOpener",
-    attributesValidationRules: { ...BgOpenerValidation
+    attributesValidationRules: {
+      ...BgOpenerValidation
     }
   }, {
     exportable: TwoSidesReveal,
     name: "TwoSidesReveal",
-    attributesValidationRules: { ...TwoSidesRevealValidation
+    attributesValidationRules: {
+      ...TwoSidesRevealValidation
     }
   }, {
     exportable: ColumnReveal,
     name: "ColumnReveal",
-    attributesValidationRules: { ...ColumnRevealValidation
+    attributesValidationRules: {
+      ...ColumnRevealValidation
     }
   }, {
     exportable: RowReveal,
     name: "RowReveal",
-    attributesValidationRules: { ...RowRevealValidation
+    attributesValidationRules: {
+      ...RowRevealValidation
     }
   }, {
     exportable: ThreeSidesReveal,
     name: "ThreeSidesReveal",
-    attributesValidationRules: { ...ThreeSidesRevealValidation
+    attributesValidationRules: {
+      ...ThreeSidesRevealValidation
     }
   }, {
     exportable: Grid,
     name: "Grid",
-    attributesValidationRules: { ...GridValidation
+    attributesValidationRules: {
+      ...GridValidation
     }
   }, {
     exportable: HexagonCircle,
     name: "HexagonCircle",
-    attributesValidationRules: { ...HexagonCircleValidation
+    attributesValidationRules: {
+      ...HexagonCircleValidation
     }
   }, {
     exportable: FloatingBubbles,
     name: "FloatingBubbles",
-    attributesValidationRules: { ...FloatingBubblesValidation
+    attributesValidationRules: {
+      ...FloatingBubblesValidation
     }
   }, {
     exportable: Wave,
     name: "Wave",
-    attributesValidationRules: { ...WaveValidation
+    attributesValidationRules: {
+      ...WaveValidation
     }
   }, {
     exportable: GradientLines,
     name: "GradientLines",
-    attributesValidationRules: { ...GradientLinesValidation
+    attributesValidationRules: {
+      ...GradientLinesValidation
     }
   }, {
     exportable: Ripples,
     name: "Ripples",
-    attributesValidationRules: { ...RipplesValidation
+    attributesValidationRules: {
+      ...RipplesValidation
     }
   }]
 };
