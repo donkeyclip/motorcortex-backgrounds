@@ -1789,7 +1789,7 @@ var devDependencies = {
 	webpack: "5.75.0",
 	"webpack-cli": "4.10.0",
 	"webpack-dev-server": "4.11.1",
-	"whatwg-fetch": "3.6.2"
+	"whatwg-fetch": "3.6.20"
 };
 var pkg = {
 	name: name,
