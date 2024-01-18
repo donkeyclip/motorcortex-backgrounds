@@ -1760,7 +1760,7 @@ var devDependencies = {
 	"caniuse-lite": "1.0.30001579",
 	concurrently: "7.6.0",
 	coveralls: "3.1.1",
-	"css-loader": "6.9.0",
+	"css-loader": "6.9.1",
 	"es6-promise": "4.2.8",
 	eslint: "7.32.0",
 	"eslint-config-prettier": "8.10.0",
